@@ -1,0 +1,13 @@
+[
+  {
+    "date": "2026-04-01",
+    "version": "0.1.0",
+    "title": "Kedular beta launch",
+    "changes": [
+      "XER file upload and parsing (P6 versions 15.2–19.12)",
+      "Interactive Gantt chart with WBS tree",
+      "Critical path calculation and highlighting",
+      "Project dashboard with schedule summary"
+    ]
+  }
+]
