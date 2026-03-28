@@ -1,0 +1,14 @@
+ERMHDR	19.12.0.0	2026-01-15 08:00	eppm	admin
+%T	PROJECT
+%F	proj_id	proj_short_name	proj_name	data_date
+%R	1001	PROJ1	Test Project	2026-01-15
+%T	PROJWBS
+%F	wbs_id	proj_id	parent_wbs_id	wbs_short_name	wbs_name	seq_num
+%R	2001	1001		PROJ1	Test Project	1
+%T	TASK
+%F	task_id	proj_id	wbs_id	clndr_id	task_code	task_name	task_type	status_code	target_start_date	target_end_date	remain_drtn_hr_cnt	total_float_hr_cnt	phys_complete_pct
+%R	3001	1001	2001	1	TASK-001	Excavation	TT_Task	TK_NotStart	2026-01-05 08:00	2026-01-09 17:00	40	16	0
+%T	TASKPRED
+%F	task_pred_id	task_id	pred_task_id	proj_id	pred_type	lag_hr_cnt
+%R	4001	3002	3001	1001	PR_FS	0
+%E

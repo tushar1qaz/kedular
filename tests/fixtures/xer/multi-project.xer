@@ -1,0 +1,10 @@
+ERMHDR	19.12.0.0	2026-01-15 08:00	eppm	admin
+%T	PROJECT
+%F	proj_id	proj_short_name	proj_name	data_date
+%R	1001	PROJ1	Project Alpha	2026-01-15
+%R	1002	PROJ2	Project Beta	2026-01-15
+%T	TASK
+%F	task_id	proj_id	wbs_id	clndr_id	task_code	task_name	task_type	status_code	target_start_date	target_end_date	remain_drtn_hr_cnt	total_float_hr_cnt	phys_complete_pct
+%R	3001	1001		1	TASK-001	Alpha Task 1	TT_Task	TK_NotStart	2026-01-05 08:00	2026-01-09 17:00	40	0	0
+%R	3002	1002		1	TASK-002	Beta Task 1	TT_Task	TK_NotStart	2026-01-05 08:00	2026-01-09 17:00	40	0	0
+%E
