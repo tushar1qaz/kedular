@@ -193,6 +193,18 @@ export const version_diffs = pgTable('version_diffs', {
   uniqueVersionPair: unique().on(table.base_version_id, table.compare_version_id),
 }));
 
+export const what_if_scenarios = pgTable('what_if_scenarios', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  project_id: uuid('project_id').notNull().references(() => projects.id, { onDelete: 'cascade' }),
+  version_id: uuid('version_id').references(() => schedule_versions.id),
+  name: text('name').notNull(),
+  description: text('description'),
+  delays: jsonb('delays').notNull(), // ActivityDelay[]
+  impact: jsonb('impact'), // WhatIfImpact (cached)
+  created_by: uuid('created_by').references(() => users.id),
+  created_at: timestamp('created_at').defaultNow(),
+});
+
 export const schedule_exports = pgTable('schedule_exports', {
   id: uuid('id').primaryKey().defaultRandom(),
   project_id: uuid('project_id').references(() => projects.id),
